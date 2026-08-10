@@ -1,0 +1,250 @@
+/* Main wrapper */
+.authRightCol {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.9),
+    rgba(20, 25, 35, 0.92),
+    rgba(25, 35, 45, 0.95)
+  );
+  backdrop-filter: blur(5px);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  align-items: center;
+}
+
+/* Left image section */
+.authLeftCol {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+}
+
+.authLeftCol img {
+  filter: brightness(0.75) saturate(1.1);
+  object-fit: cover;
+}
+
+/* Form card with glass effect */
+.formWrapper {
+  width: 100%;
+  max-width: 380px;
+  padding: 2.2rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+  color: #e8e8e8;
+}
+
+/* Input fields */
+.formWrapper input {
+  background: rgba(25, 25, 35, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+.formWrapper input:focus {
+  border-color: #00eaff;
+  background: rgba(30, 40, 55, 0.85);
+  box-shadow: 0 0 8px #00eaff;
+  color: white;
+}
+
+/* Password icon */
+.passwordToggleIcon {
+  position: absolute;
+  top: 70%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #9aa0ac;
+  z-index: 5;
+}
+
+.passwordToggleIcon:hover {
+  color: #00eaff;
+}
+
+/* EV neon button */
+.btnPrimaryEV {
+  background: linear-gradient(135deg, #00eaff, #0288ff);
+  border: none;
+  padding: 10px 30px;
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  transition: 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.btnPrimaryEV:hover {
+  box-shadow: 0 0 12px #00eaff;
+  transform: translateY(-2px);
+}
+
+/* Resend OTP */
+.btnOutlineEV {
+  border: 1px solid #00eaff;
+  color: #00eaff;
+  padding: 10px 22px;
+  border-radius: 8px;
+  background: transparent;
+  transition: 0.3s ease;
+  text-wrap: nowrap;
+  margin-left: 0;
+}
+
+.btnOutlineEV:hover {
+  background: #00eaff21;
+  box-shadow: 0 0 10px #00eaff;
+}
+
+/* Links */
+.regLink,
+.forgotPassword {
+  color: #00eaff !important;
+  font-weight: 500;
+}
+
+.regLink:hover,
+.forgotPassword:hover {
+  text-decoration: underline;
+}
+
+/* ---- EV PRIMARY BUTTON ---- */
+.evPrimaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #00eaff, #007bff);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 0 12px rgba(0, 234, 255, 0.4);
+  position: relative;
+  overflow: hidden;
+  text-wrap: nowrap;
+}
+
+/* Glow + shine animation */
+.evPrimaryButton::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -80%;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.25);
+  transform: skewX(-20deg);
+  transition: 0.5s;
+}
+
+.evPrimaryButton:hover::before {
+  left: 130%;
+}
+
+.evPrimaryButton:hover {
+  box-shadow: 0 0 18px rgba(0, 234, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+/* Click effect */
+.evPrimaryButton:active {
+  transform: scale(0.96);
+}
+
+.btnOutlineEV {
+  border: 1px solid #00eaff;
+  color: #00eaff;
+  padding: 10px 25px;
+  border-radius: 10px;
+  background: transparent;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+}
+
+.btnOutlineEV:hover {
+  background: rgba(0, 234, 255, 0.1);
+  box-shadow: 0 0 12px rgba(0, 234, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+.btnOutlineEV:active {
+  transform: scale(0.96);
+}
+/* make sure the wrapper class is applied to the div that contains the image:
+   <div className={`${styles.authLeftCol} ${styles.evImageAnimation}`}> ... <img .../> </div>
+*/
+
+/* EV image animation wrapper */
+.evImageAnimation img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  animation: evChargeCycle 8s ease-in-out infinite,
+    /* Main charge cycle */ evPulse 2s ease-in-out infinite; /* Energy waves pulse */
+}
+
+/* Main charging cycle: ON → PEAK → OFF */
+@keyframes evChargeCycle {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 0px #00ffb3);
+  }
+
+  /* Glow begins (charging starts) */
+  20% {
+    transform: scale(1.02);
+    filter: brightness(1.15) drop-shadow(0 0 12px #00ffb3);
+  }
+
+  /* Peak charging */
+  40% {
+    transform: scale(1.04);
+    filter: brightness(1.25) drop-shadow(0 0 25px #00ffb3);
+  }
+
+  /* Hold glow */
+  55% {
+    transform: scale(1.03);
+    filter: brightness(1.2) drop-shadow(0 0 18px #00ffb3);
+  }
+
+  /* Charging stops — glow goes off */
+  75% {
+    transform: scale(1.01);
+    filter: brightness(1.05) drop-shadow(0 0 5px #00ffb3);
+  }
+
+  /* Reset */
+  100% {
+    transform: scale(1);
+    filter: brightness(1) drop-shadow(0 0 0px #00ffb3);
+  }
+}
+
+/* Subtle electric pulse (keeps repeating) */
+@keyframes evPulse {
+  0% {
+    filter: brightness(1.1) drop-shadow(0 0 5px rgba(0, 255, 179, 0.2));
+  }
+  50% {
+    filter: brightness(1.2) drop-shadow(0 0 12px rgba(0, 255, 179, 0.4));
+  }
+  100% {
+    filter: brightness(1.1) drop-shadow(0 0 5px rgba(0, 255, 179, 0.2));
+  }
+}

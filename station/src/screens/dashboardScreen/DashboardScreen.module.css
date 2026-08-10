@@ -1,0 +1,263 @@
+/* Wrapper */
+.dashboardWrapper {
+  padding: 30px;
+  color: #e8faff;
+  background: #0a0f14;
+  min-height: 100%;
+}
+
+/* --- Summary Cards --- */
+.summaryGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background: linear-gradient(180deg, #0f1d25 0%, #0a1218 100%);
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 0 18px rgba(0, 255, 200, 0.08);
+  border: 1px solid rgba(0, 255, 200, 0.1);
+  transition: 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 200, 0.2);
+}
+
+.card h3 {
+  font-size: 16px;
+  color: #c1e8f5;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.card p {
+  font-size: 28px;
+  font-weight: 700;
+  color: #00ffcc;
+  letter-spacing: 1px;
+}
+
+/* --- Sections --- */
+.section {
+  margin-top: 40px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #a9f7ff;
+  letter-spacing: 0.5px;
+}
+/* --- Port Breakdown Grid --- */
+.portGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* NEW Premium Port Card */
+.portCard {
+  position: relative;
+  padding: 22px;
+  border-radius: 18px;
+  background: #0c141a;
+  border: 1px solid rgba(0, 255, 200, 0.12);
+  box-shadow: inset 0 0 18px rgba(0, 255, 200, 0.04),
+    0 6px 22px rgba(0, 255, 200, 0.12);
+  transition: 0.3s ease;
+  overflow: hidden;
+}
+
+/* Neon gradient border glow */
+.portCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 2px;
+  background: linear-gradient(135deg, #00ffcc, #00aaff, #0066ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Hover effect */
+.portCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px rgba(0, 255, 200, 0.25);
+}
+
+/* Top strip with icon + name */
+.portHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.portIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(0, 255, 200, 0.12);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #00ffcc;
+  font-size: 22px;
+}
+/* Port Card Title */
+.portName {
+  font-size: 20px; /* big + readable */
+  font-weight: 700;
+  color: #eaffff;
+  margin-bottom: 12px;
+  letter-spacing: 0.6px;
+  text-align: left;
+}
+
+/* Stats Container */
+.portStats {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Label + Value aligned nicely */
+.portStats p {
+  font-size: 16px; /* bigger labels */
+  font-weight: 500;
+  color: #b9d8e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+/* Value Highlight */
+.portStats span {
+  font-size: 18px; /* bigger values */
+  font-weight: 700;
+  color: #00ffd9;
+  text-shadow: 0 0 10px rgba(0, 255, 217, 0.4);
+}
+
+/* --- Table --- */
+.tableContainer {
+  margin-top: 20px;
+  background: #0c141a;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.08);
+  overflow-x: auto;
+  height: 240px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 14px rgba(0, 255, 200, 0.08);
+}
+
+.table thead {
+  background: rgba(0, 255, 200, 0.08);
+  position: sticky;
+}
+
+.table th {
+  padding: 12px;
+  text-align: left;
+  color: #00ffcc;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 14px;
+  font-size: 14px;
+  color: #e9faff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+.table tbody tr:hover {
+  background: rgba(0, 255, 200, 0.07);
+  transition: 0.2s;
+}
+
+/* Empty state */
+.emptyState {
+  height: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 200, 0.08),
+    rgba(0, 0, 0, 0.25)
+  );
+  border-radius: 12px;
+}
+
+/* Icon */
+.emptyIcon {
+  font-size: 40px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 200, 0.5));
+}
+
+/* Title */
+.emptyTitle {
+  font-size: 15px;
+  font-weight: 700;
+  color: #00ffcc;
+  letter-spacing: 0.4px;
+}
+
+/* Subtitle */
+.emptySubtext {
+  font-size: 13px;
+  color: rgba(200, 255, 245, 0.7);
+  margin-top: 4px;
+}
+
+/* Payment badges */
+.paymentPaid {
+  color: #00e6b0;
+  font-weight: 600;
+}
+
+.paymentPending {
+  color: #ff7a7a;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .summaryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .summaryGrid,
+  .portGrid {
+    grid-template-columns: 1fr;
+  }
+}

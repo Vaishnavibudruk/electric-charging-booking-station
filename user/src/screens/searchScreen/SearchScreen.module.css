@@ -1,0 +1,25 @@
+.searchPageWrapper {
+  background: #0e0e0e;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* prevent the wrapper from scrolling */
+}
+
+.navbarWrapper {
+  height: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  flex-shrink: 0;
+}
+
+.searchMapContainer {
+  display: flex;
+  flex: 1; /* take all remaining space */
+  overflow: hidden; /* prevent scrolling */
+  height: auto; /* let flex handle height */
+}
+
+.searchMapContainer > * {
+  height: 100%; /* ensure MapView and Sidebar take full height */
+}

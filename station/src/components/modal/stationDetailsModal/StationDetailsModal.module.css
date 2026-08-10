@@ -1,0 +1,328 @@
+/* ---- OVERLAY ---- */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+/* ---- MODAL BOX ---- */
+.modal {
+  width: 800px;
+  background: linear-gradient(180deg, #0f1d25 0%, #0a1218 100%);
+  border-radius: 16px;
+  padding: 28px;
+  position: relative;
+  border: 1px solid rgba(0, 255, 200, 0.12);
+  box-shadow: inset 0 0 18px rgba(0, 255, 200, 0.06),
+    0 6px 22px rgba(0, 255, 200, 0.15);
+
+  animation: fadeScale 0.25s ease-out;
+}
+
+/* Row layout */
+.formRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 8px;
+}
+
+/* Each input in the row */
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+/* Make direct row inputs expand evenly */
+.formRow input {
+  flex: 1;
+}
+
+/* Ensure labels inside formGroup are styled */
+.formGroup label {
+  color: #aefcff;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+/* Neon Gradient Border */
+.modal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 2px;
+  background: linear-gradient(135deg, #00ffcc, #00aaff, #0066ff);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+@keyframes fadeScale {
+  from {
+    transform: scale(0.92);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ---- CLOSE BUTTON ---- */
+.closeBtn {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #00ffd9;
+  filter: drop-shadow(0 0 6px rgba(0, 255, 200, 0.5));
+  transition: 0.2s ease;
+}
+
+.closeBtn:hover {
+  transform: scale(1.15);
+  color: #7afff2;
+}
+
+/* ---- HEADER ---- */
+.header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.icon {
+  font-size: 50px;
+  color: #00ffd9;
+  filter: drop-shadow(0 0 10px rgba(0, 255, 200, 0.6));
+}
+
+.title {
+  margin-top: 10px;
+  color: #eaffff;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ---- VIEW DETAILS ---- */
+/* VIEW MODE CONTAINER */
+.viewContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 18px;
+}
+
+/* ROW LIKE EDIT MODE */
+.viewRow {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+/* INDIVIDUAL FIELD */
+.viewGroup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewGroupFull {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* LABELS */
+.viewGroup label,
+.viewGroupFull label {
+  color: #aefcff;
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* TEXT IN VIEW MODE */
+.viewGroup p,
+.viewGroupFull p {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 15px;
+}
+.viewGroup p {
+  margin-bottom: 0;
+}
+.details {
+  margin-top: 10px;
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 15px;
+  color: #b9d8e0;
+  background: rgba(0, 255, 217, 0.06);
+  padding: 10px 14px;
+  border-radius: 10px;
+  border-left: 3px solid rgba(0, 255, 200, 0.4);
+}
+
+.details strong {
+  color: #00ffd9;
+}
+
+.primaryBtn {
+  width: 100%;
+  padding: 12px 18px;
+  background: linear-gradient(135deg, #00ffd9, #00aaff);
+  border: none;
+  border-radius: 12px;
+  color: #001b21;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-shadow: 0 0 12px rgba(0, 255, 217, 0.4);
+}
+
+.primaryBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 18px rgba(0, 255, 217, 0.7);
+}
+
+/* ---- INPUTS ---- */
+.form label {
+  color: #aefcff;
+  font-size: 14px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.form input {
+  width: 100%;
+  padding: 10px 14px;
+  background: rgba(0, 255, 217, 0.06);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 200, 0.3);
+  color: #eaffff;
+  margin-bottom: 16px;
+  font-size: 15px;
+  outline: none;
+}
+
+.form input:focus {
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.35);
+}
+
+.form input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---- ROW ---- */
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.row input {
+  flex: 1;
+}
+
+/* ---- LOCATION BUTTON ---- */
+.locationBtn {
+  padding: 10px 14px;
+  background: rgba(0, 255, 200, 0.12);
+  border: 1px solid rgba(0, 255, 200, 0.35);
+  border-radius: 10px;
+  color: #00ffd9;
+  cursor: pointer;
+  margin-bottom: 18px;
+  transition: 0.2s ease;
+}
+
+.locationBtn:hover {
+  background: rgba(0, 255, 200, 0.22);
+  box-shadow: 0 0 10px rgba(0, 255, 200, 0.4);
+}
+
+/* ---- BUTTON ROW ---- */
+.btnRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cancelBtn {
+  width: 50%;
+  padding: 12px 18px;
+  background: rgba(255, 0, 0, 0.16);
+  border: 1px solid rgba(255, 0, 0, 0.4);
+  border-radius: 10px;
+  color: #ff9c9c;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.cancelBtn:hover {
+  background: rgba(255, 0, 0, 0.25);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.35);
+}
+
+.primaryBtn {
+  width: 50%;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  background: #eef3ff;
+  color: #2b59ff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.vehicleTypeContainer {
+  display: flex;
+  gap: 12px;
+  margin: 6px 0 12px 0;
+}
+
+.vehicleTypeOption {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 500px) {
+  .modal {
+    width: 90%;
+    padding: 22px;
+  }
+
+  .icon {
+    font-size: 60px;
+  }
+}

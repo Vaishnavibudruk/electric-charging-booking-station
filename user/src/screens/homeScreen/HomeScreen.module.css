@@ -1,0 +1,171 @@
+.container {
+  width: 100%;
+  height: 120px;
+  background-image: url("../../assets/image.webp");
+  background-size: cover;
+  background-position: center;
+}
+
+.container .heading {
+  color: rgb(38 199 45);
+  text-align: center;
+  font-size: 27.5px;
+  font-weight: bold;
+  font-family: "Roboto";
+  margin-bottom: 5px;
+}
+
+.container .title {
+  color: white;
+  text-align: center;
+  font-size: 27.5px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+.container .hypen {
+  color: rgb(38 199 45);
+}
+
+.heroSection {
+  width: 100%;
+  height: 90vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgb(0, 0, 0)),
+    url("../../assets/heroBgImage.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Black transparent gradient overlay */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.899),
+    rgba(0, 0, 0, 0.837)
+  );
+  z-index: 2;
+}
+
+.heading {
+  color: #fff;
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.title {
+  color: #00eaff;
+  font-size: 52px;
+  font-weight: bold;
+}
+
+.heroTextWrapper {
+  text-align: center;
+  padding-top: 10%;
+  /* padding: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroTitle {
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    90deg,
+    #8d081a 0%,
+    /* dark wine-red */ #e26663 20%,
+    /* soft coral red */ #f8d4ce 45%,
+    /* peach/light skin */ #ffffff 65%,
+    /* pure white */ #6c6d72 100% /* grey like image */
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroSubtitle {
+  font-size: 20px;
+  color: #d4d4d4;
+  max-width: 700px;
+  margin: 12px auto 0 auto;
+  line-height: 1.5;
+  font-family: "Science Gothic";
+}
+
+.signInButton {
+  padding: 10px 50px;
+  background: linear-gradient(135deg, #0073ffbb, #00c8ff77);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 136, 255, 0.4);
+  text-decoration: none;
+}
+
+.signInButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.8), 0 0 25px rgba(0, 191, 255, 0.5);
+  background: linear-gradient(135deg, #009dff, #00e1ff);
+  color: white;
+}
+
+.signInButton:active {
+  transform: scale(0.97);
+}
+
+/* Network Section */
+.networkSection {
+  width: 100%;
+  height: 100vh;
+
+  background: linear-gradient(
+      to bottom,
+      rgb(0, 0, 0) 10%,
+      rgba(0, 0, 0, 0.809),
+      rgba(0, 0, 0, 0.25),
+      rgb(0, 0, 0) 90%
+    ),
+    url("../../assets/networkBg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.networkTitle {
+  padding-top: 5%;
+  font-size: 60px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.networkSubTitle {
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: linear-gradient(
+    90deg,
+    #8d081a 0%,
+    /* dark wine-red */ #e26663 40%,
+    /* soft coral red */ #f8d4ce 45%,
+    /* peach/light skin */ #ffffff 65%,
+    /* pure white */ #6c6d72 100% /* grey like image */
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

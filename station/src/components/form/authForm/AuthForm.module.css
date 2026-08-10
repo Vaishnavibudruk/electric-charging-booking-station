@@ -1,0 +1,53 @@
+/* Left column image styling */
+
+/* Form wrapper styling */
+.formWrapper {
+  width: 100%;
+  max-width: 400px;
+  padding: 2rem;
+  background-color: rgba(255, 255, 255, 0.461);
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.loginImg {
+  opacity: 0.5;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.authLeftCol {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  overflow: hidden;
+}
+
+.authRightCol {
+  background: linear-gradient(135deg, #012a38, #015871, #02a7d8);
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.426);
+}
+
+.passwordToggleIcon {
+  position: absolute;
+  top: 72%;
+  right: 14px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  pointer-events: auto;
+}
+
+.passwordToggleIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.passwordToggleIcon:hover {
+  color: #000;
+}

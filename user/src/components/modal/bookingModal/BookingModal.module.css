@@ -1,0 +1,118 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(17, 24, 39, 0.918);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99900;
+}
+
+.modalCard {
+  width: 500px;
+  background: #1c2530;
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+  color: #e5ecf5;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #9db7d1;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #b8c7d9;
+}
+
+input,
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: #111822;
+  margin-bottom: 14px;
+  color: #e1e9f3;
+}
+
+.priceBox {
+  background: #111822;
+  padding: 12px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.footer {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-left: 0.75rem;
+  margin-left: 0.75rem;
+  margin-top: 20px;
+}
+
+.cancelBtn {
+  background: #374151;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.submitBtn {
+  background: #2a73e8;
+  padding: 10px 16px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.paymentRow {
+  gap: 12px;
+  margin-top: 6px;
+}
+
+/* Badge styling */
+.waitingBadge {
+  padding: 5px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Color variations */
+.green {
+  background: #28a745;
+}
+
+.orange {
+  background: #ff9800;
+}
+
+.red {
+  background: #e53935;
+}

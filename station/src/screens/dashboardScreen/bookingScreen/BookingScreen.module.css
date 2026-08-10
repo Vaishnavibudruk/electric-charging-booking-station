@@ -1,0 +1,8 @@
+/* Wrapper for Booking Screen */
+.bookingScreenWrapper {
+  padding-inline: 30px;
+  padding-top: 30px;
+  background: #0a0f14;
+  color: #e8faff;
+  min-height: 100vh;
+}

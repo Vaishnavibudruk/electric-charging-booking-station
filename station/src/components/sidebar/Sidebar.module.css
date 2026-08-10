@@ -1,0 +1,110 @@
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(180deg, #0d0f13 0%, #0b1b24 45%, #071016 100%);
+  padding: 22px 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-right: 1px solid rgba(0, 255, 200, 0.07);
+  box-shadow: 4px 0 20px rgba(0, 255, 200, 0.05);
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  color: #e8faff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoGlow {
+  font-size: 26px;
+  color: #00ffcc;
+  filter: drop-shadow(0 0 6px #00ffcc);
+  animation: glowPulse 2.2s ease-in-out infinite;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 40px;
+}
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: #d1e4ea;
+  font-size: 15px;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.25s ease;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.menuItem svg {
+  font-size: 20px;
+  color: #8bf7ff;
+}
+
+/* Hover Glow */
+.menuItem:hover {
+  background: rgba(0, 255, 200, 0.08);
+  box-shadow: 0 0 12px rgba(0, 255, 200, 0.25);
+  transform: translateX(6px);
+  color: #8bf7ff;
+}
+
+/* Logout */
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  color: #ff8d8d;
+  font-size: 15px;
+  border-radius: 10px;
+  background: rgba(255, 0, 0, 0.05);
+  cursor: pointer;
+  transition: 0.25s ease;
+  border: none;
+}
+
+.logout:hover {
+  background: rgba(255, 0, 0, 0.12);
+  box-shadow: 0 0 12px rgba(255, 0, 0, 0.25);
+  transform: translateX(6px);
+}
+
+.activeMenu {
+  background: rgba(0, 255, 200, 0.07);
+  box-shadow: 0 0 4px rgba(0, 255, 200, 0.3);
+  transform: translateX(6px);
+  color: #00ffcc !important;
+  border: 1px solid rgba(0, 255, 200, 0.4);
+}
+
+.activeMenu svg {
+  color: #00ffcc !important;
+}
+
+/* Pulsing Glow */
+@keyframes glowPulse {
+  0% {
+    filter: drop-shadow(0 0 4px #00ffcc);
+  }
+  50% {
+    filter: drop-shadow(0 0 14px #00ffcc);
+  }
+  100% {
+    filter: drop-shadow(0 0 4px #00ffcc);
+  }
+}

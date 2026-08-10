@@ -1,0 +1,155 @@
+.navbarColor {
+  background-color: transparent;
+  height: 70px;
+}
+.fixedNavbarColor {
+  background-color: rgba(0, 0, 0, 0.639);
+  height: 70px;
+}
+.navbarBrand {
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color: white !important;
+}
+.logoImage {
+  height: 3rem;
+}
+
+.logoImage {
+  width: 100px;
+  height: 100px;
+  filter: hue-rotate(300deg);
+}
+.navLink {
+  position: relative;
+  color: #ffffff !important;
+  font-size: 18px;
+  margin: 0 15px;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+/* Sliding underline */
+.navLink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 4px; /* Adjusted because of padding */
+  height: 2px;
+  width: 0%;
+  background: #00eaff;
+  transition: width 0.3s ease;
+}
+
+/* Hover effect (text + underline + background) */
+.navLink:hover {
+  color: #00eaff !important;
+  letter-spacing: 1px;
+  background: rgba(0, 234, 255, 0.12); /* soft light aqua glow */
+  backdrop-filter: blur(4px); /* premium frosted effect */
+}
+
+/* Underline expansion on hover */
+.navLink:hover::after {
+  width: 100%;
+}
+
+.centerNav {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(
+    -50%,
+    -50%
+  ); /* perfectly centered vertically & horizontally */
+  display: flex;
+  align-items: center;
+  z-index: 1; /* above video/hero if any */
+}
+
+.signInButton {
+  padding: 5px 22px;
+  background: linear-gradient(135deg, #0073ffbb, #00c8ff77);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0px 0px 10px rgba(0, 136, 255, 0.4);
+  text-decoration: none;
+}
+
+.signInButton:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.8), 0 0 25px rgba(0, 191, 255, 0.5);
+  background: linear-gradient(135deg, #009dff, #00e1ff);
+  color: white;
+}
+
+.signInButton:active {
+  transform: scale(0.97);
+}
+
+.userIcon {
+  color: #333;
+  cursor: pointer;
+}
+
+.logoutButton {
+  padding: 6px 14px;
+  border-radius: 8px;
+  background: #e63946;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.logoutButton:hover {
+  background: #c62828;
+}
+
+.activeLink {
+  color: #00ffcc !important;
+  font-weight: 600;
+  border-bottom: 2px solid #00ffcc;
+  padding-bottom: 3px;
+}
+
+/* On smaller screens (collapse / mobile), restore normal flow */
+@media (max-width: 991px) {
+  .centerNav {
+    position: static;
+    transform: none;
+    width: 100%;
+    justify-content: center; /* center within collapsed vertical list */
+    padding: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loginbtn,
+  .regbtn {
+    padding: 3px 15px;
+  }
+  .logoImage {
+    height: 1.5rem;
+  }
+  .nav-link {
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: black !important;
+  }
+  .navbar-brand {
+    font-size: 1.2rem !important;
+  }
+  .nav {
+    position: absolute;
+    height: 3rem;
+  }
+}

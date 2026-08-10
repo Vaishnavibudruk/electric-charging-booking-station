@@ -1,0 +1,8 @@
+**/node_modules/
+*.zip
+*.exe
+.env
+build/
+dist/
+__MACOSX/
+.DS_Store

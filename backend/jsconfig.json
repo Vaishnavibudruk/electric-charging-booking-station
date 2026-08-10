@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "checkJs": true, // enable JS checking
+    "noEmit": true, // don’t generate any JS output
+    "allowJs": true, // allow JS files
+    "module": "commonjs",
+    "target": "es6",
+    "strict": false, // turn off strict type checks
+    "noImplicitAny": false
+  },
+  "include": ["./**/*.js"]
+}

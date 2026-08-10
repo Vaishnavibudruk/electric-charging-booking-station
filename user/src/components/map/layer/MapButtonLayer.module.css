@@ -1,0 +1,83 @@
+/* Wrapper pinned at bottom-right */
+.wrapper {
+  position: absolute;
+  bottom: 20px;
+  left: 20px; /* ← moved to bottom-right */
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* Every image box gets a clean white border */
+.menuItem img {
+  width: 100%;
+  height: 55px;
+  border-radius: 8px;
+  object-fit: cover;
+  /* border: 2px solid white;  */
+}
+
+/* Text INSIDE the image */
+.menuItem,
+.preview {
+  border: 2px solid white;
+  position: relative; /* allow label inside */
+  padding: 0; /* remove outer padding */
+  cursor: pointer;
+  width: 80px;
+  height: 70px;
+  border-radius: 10px;
+  overflow: hidden; /* keep text & img clipped */
+}
+
+/* Label positioned INSIDE the image bottom */
+.label {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+  color: white;
+  padding: 2px 0;
+  z-index: 999;
+  text-align: center;
+}
+
+/* Horizontal menu strip */
+.menuStrip {
+  margin-left: 12px;
+  padding: 10px;
+  display: flex;
+  gap: 12px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Selected tile */
+.active {
+  outline: 3px solid #4285f4;
+  outline-offset: -3px;
+}
+
+/* Gradient overlay for preview & menu items */
+.menuItem::after,
+.preview::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* covers more of the bottom area */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.853),
+    rgba(0, 0, 0, 0.587),
+    rgba(0, 0, 0, 0)
+  );
+  pointer-events: none;
+  border-radius: inherit;
+}

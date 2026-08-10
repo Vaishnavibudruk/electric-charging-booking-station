@@ -1,0 +1,262 @@
+/* MAIN CARD CONTAINER */
+.stationDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+  padding: 22px;
+  background: #121820; /* clean dashboard dark */
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* BACK BUTTON */
+.backButton {
+  background: none;
+  border: none;
+  font-size: 15px;
+  color: #7ab8ff;
+  cursor: pointer;
+  margin-bottom: 10px;
+  padding: 6px 0;
+  font-weight: 600;
+}
+
+.backButton:hover {
+  color: #4ea2ff;
+}
+
+/* TITLE */
+.detailsTitle {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #e8f1ff;
+}
+
+/* TEXT ROWS */
+.detailsRow {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #9fb4c9;
+}
+
+/* HEADER */
+.portHeader {
+  margin-top: 20px;
+  font-size: 17px;
+  font-weight: 700;
+  color: #d2e6ff;
+}
+
+/* ACCORDION SCROLL AREA */
+.accordionWrapper {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  margin-bottom: 85px;
+}
+
+/* ACCORDION LIST */
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* SINGLE ACCORDION CARD */
+.accordionItem {
+  background: #1a232e;
+  border-radius: 14px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.accordionItem:hover {
+  background: #1e2733;
+  transform: translateY(-2px);
+}
+
+/* ACCORDION HEADER */
+.accordionHeader {
+  width: 100%;
+  padding: 16px 18px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: none;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: 600;
+  color: #c8d9eb;
+}
+
+.icon {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ACCORDION CONTENT */
+.accordionContent {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease, padding 0.25s ease;
+  padding: 0 18px;
+  background: #1a2029;
+}
+
+.accordionContent.open {
+  max-height: 260px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+/* PORT DETAILS */
+.portDetails p {
+  margin: 6px 0;
+  font-size: 14px;
+  color: #b8c7d9;
+}
+
+/* FIXED BOTTOM BUTTON */
+.bookBtn {
+  position: absolute;
+  bottom: 20px;
+  left: 18px;
+  right: 18px;
+  background: #2a73e8;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  box-shadow: 0 4px 12px rgba(42, 115, 232, 0.4);
+  transition: background 0.25s ease, transform 0.2s ease;
+}
+
+.bookBtn:hover {
+  background: #1f62c9;
+  transform: translateY(-2px);
+}
+
+/* INFO CARD */
+.infoCard {
+  background: #1a212c;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 18px 20px;
+  border-radius: 14px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* EACH ROW */
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.06);
+  padding-bottom: 10px;
+}
+
+.infoRow:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+/* LABEL */
+.infoLabel {
+  font-size: 14px;
+  color: #8fa4b9;
+  font-weight: 500;
+}
+
+/* VALUE */
+.infoValue {
+  font-size: 14px;
+  color: #e5f1ff;
+  font-weight: 600;
+  text-align: right;
+  max-width: 55%;
+  line-height: 1.4;
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.backButton {
+  background: #1d2631;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  border: none;
+  font-size: 18px;
+  color: #7ab8ff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.backButton:hover {
+  background: #24303e;
+  color: #4ea2ff;
+}
+
+/* Clean info container */
+.infoCard {
+  margin-top: 6px;
+  background: #1a232e;
+  padding: 18px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: #9fb4c9;
+  font-size: 14px;
+}
+
+.value {
+  color: #d7e7ff;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.badgeContainer {
+  display: flex;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.badge {
+  background: #eef3ff;
+  color: #2b59ff;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+}

@@ -1,0 +1,329 @@
+/* Table Container */
+.tableContainer {
+  margin-top: 25px;
+  background: #0c141a;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 255, 200, 0.14);
+  box-shadow: 0 0 20px rgba(0, 255, 200, 0.08);
+  overflow-x: auto;
+  height: 75vh;
+
+  /* NEW — makes table vertically scrollable */
+  overflow-y: auto;
+
+  /* smooth neon scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: #00ffcc #071017;
+}
+
+.tableContainer::-webkit-scrollbar {
+  width: 8px;
+}
+
+.tableContainer::-webkit-scrollbar-track {
+  background: #071017;
+}
+
+.tableContainer::-webkit-scrollbar-thumb {
+  background: #00ffcc;
+  border-radius: 20px;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+/* Table */
+.table {
+  border-collapse: collapse;
+  color: #e9faff;
+  font-size: 15px;
+  width: 100%;
+}
+
+/* Table Header */
+.table thead {
+  background: rgba(0, 255, 200, 0.12);
+}
+
+.table th {
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 700;
+  color: #00ffcc;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid rgba(0, 255, 200, 0.18);
+  text-shadow: 0 0 6px rgba(0, 255, 200, 0.4);
+}
+
+/* Table Rows */
+.table td {
+  padding: 14px 12px;
+  font-size: 14px;
+  color: #dbf9ff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Hover */
+.table tbody tr:hover {
+  background: rgba(0, 255, 200, 0.08);
+  transition: 0.25s ease;
+}
+
+/* Remove border for last row */
+.table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Dropdown container */
+.dropdownWrapper {
+  position: relative;
+  display: flex;
+}
+
+/* Update button */
+.updateBtn {
+  background: #007bff;
+  color: white;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-wrap: nowrap;
+}
+
+.updateBtn:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+}
+
+/* Wrapper that allows tooltip even when button is disabled */
+.tooltipWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Tooltip box */
+.tooltipWrapper:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 110%; /* show above button */
+  left: 20%;
+  transform: translateX(-50%);
+  background: #ffffff;
+  color: #000000;
+  padding: 6px 10px;
+  border-radius: 6px;
+  white-space: nowrap;
+  font-size: 12px;
+  z-index: 10;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* little arrow */
+.tooltipWrapper:hover::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+.confirmBtn {
+  background: #00c853;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  color: white;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s ease;
+}
+
+.confirmBtn:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+.confirmBtn:disabled {
+  background-color: #555; /* grey disabled color */
+  color: #999;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.confirmBtn:hover {
+  background: #00e676;
+  transform: translateY(-1px);
+  box-shadow: 0 0 8px rgba(0, 255, 120, 0.6);
+}
+
+/* Dropdown box */
+.dropdownMenu {
+  position: absolute;
+  top: 38px;
+  right: 0;
+  background: #0a0f14;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 150px;
+  z-index: 20;
+  padding: 6px 0;
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Dropdown items */
+.dropdownItem {
+  padding: 10px 14px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s ease;
+}
+
+.dropdownItem:hover {
+  background: #1a1a1a;
+}
+/* Shared badge style */
+.statusBadge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 0 4px rgba(0, 255, 200, 0.15);
+}
+
+/* Booking statuses */
+.statusPending {
+  background: rgba(255, 180, 40, 0.12);
+  color: #ffcb66;
+  border: 1px solid rgba(255, 180, 40, 0.25);
+}
+
+.statusInProgress {
+  background: rgba(0, 140, 255, 0.12);
+  color: #5cc4ff;
+  border: 1px solid rgba(0, 140, 255, 0.25);
+}
+
+.statusCompleted {
+  background: rgba(0, 255, 150, 0.12);
+  color: #4cffb6;
+  border: 1px solid rgba(0, 255, 150, 0.25);
+}
+
+.statusCancelled {
+  background: rgba(255, 60, 60, 0.12);
+  color: #ff7373;
+  border: 1px solid rgba(255, 60, 60, 0.25);
+}
+
+/* Payment statuses */
+.paymentBadge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+  letter-spacing: 0.3px;
+}
+
+/* Payment statuses */
+.paymentPaid {
+  background: rgba(0, 255, 180, 0.15);
+  color: #00e6b0;
+  border: 1px solid rgba(0, 255, 180, 0.25);
+}
+
+.paymentPending {
+  background: rgba(255, 70, 70, 0.15);
+  color: #ff7a7a;
+  border: 1px solid rgba(255, 70, 70, 0.25);
+}
+
+/* Empty state container */
+.emptyState {
+  height: 518px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #b8fef0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 255, 200, 0.08),
+    rgba(0, 0, 0, 0.25)
+  );
+  border-radius: 12px;
+}
+
+/* Icon */
+.emptyIcon {
+  font-size: 42px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 8px rgba(0, 255, 200, 0.5));
+}
+
+/* Title */
+.emptyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00ffcc;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/* Subtitle */
+.emptySubtext {
+  font-size: 13px;
+  color: rgba(200, 255, 245, 0.7);
+  max-width: 320px;
+}
+
+.emptyIcon {
+  animation: pulse 1.6s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .table th,
+  .table td {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
